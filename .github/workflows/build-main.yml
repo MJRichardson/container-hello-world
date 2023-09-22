@@ -19,7 +19,7 @@ jobs:
       run: |
         IMAGE_ID=ghcr.io/MJRichardson/$IMAGE_NAME
         IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-        VERSION=main-${{env.GITHUB_RUN_ID}}
+        VERSION=main-$GITHUB_RUN_ID
         echo IMAGE_ID=$IMAGE_ID
         echo VERSION=$VERSION
         docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
